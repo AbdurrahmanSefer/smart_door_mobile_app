@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Smart Door</string>
+    <string name="server_adress">http://arduino.smsreceive.site/</string>
+</resources>

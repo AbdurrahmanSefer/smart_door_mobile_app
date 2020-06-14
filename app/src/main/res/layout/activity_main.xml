@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/icons_container"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/no_any_pepol_in_the_door"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No any person in the door"
+        android:textSize="@dimen/text_size_large"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/text_size_large"
+        android:layout_centerHorizontal="true"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/person_in_the_door"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/main_cardview1_margin"
+            android:layout_centerInParent="true"
+            app:cardElevation="@dimen/main_cardview_Evelation"
+            tools:ignore="RtlHardcoded"
+            app:cardCornerRadius="@dimen/main_cardview_Radios">
+               <ImageView
+                   android:id="@+id/person_iv"
+                   android:layout_width="300dp"
+                   android:src="@drawable/birinci_dogru"
+                   android:layout_height="300dp">
+               </ImageView>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/open_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_rounded"
+                android:drawableLeft="@drawable/face_icon"
+                android:drawablePadding="@dimen/main_button_drawable_pading"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:padding="@dimen/main_cardview_Radios_button"
+                android:onClick="open"
+                android:layout_margin="@dimen/text_size_small"
+
+                android:text="Open Door"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium"
+                ></Button>
+            <Button
+                android:id="@+id/close_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/close_btn_rounded"
+                android:drawableLeft="@drawable/face_icon"
+                android:drawablePadding="@dimen/main_button_drawable_pading"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:layout_margin="@dimen/text_size_small"
+                android:textAllCaps="false"
+                android:padding="@dimen/main_cardview_Radios_button"
+                android:onClick="close"
+                android:text="Close Door"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_medium"
+
+                ></Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_cardview1_margin"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="history_button"
+        app:cardElevation="@dimen/main_cardview_Evelation"
+        tools:ignore="RtlHardcoded"
+        app:cardCornerRadius="@dimen/main_cardview_Radios">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/history_icon"
+            android:layout_height="50dp">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_size_large"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="refresh_button"
+      android:layout_alignParentBottom="true"
+        app:cardElevation="@dimen/main_cardview_Evelation"
+        tools:ignore="RtlHardcoded"
+        app:cardCornerRadius="@dimen/main_cardview_Radios">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/refresj_icon"
+            android:layout_height="50dp">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
